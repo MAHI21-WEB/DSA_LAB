@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int n;
+    cin>>n;
+    
+    int ar[n];
+    
+    for(int i=0;i<n;i++)
+        cin>>ar[i];
+        
+        
+    int c=0;
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(i<j && ar[i]>ar[j])
+                c++;
+        }
+    }
+    cout<<c;
+    
+    return 0;
+}
